@@ -16,6 +16,7 @@
             padding: 0;
             background-color: #f4f4f9;
             color: #333;
+            scroll-behavior: smooth;
         }
         header {
             background: linear-gradient(90deg, #ff6f61, #d84315);
@@ -40,10 +41,10 @@
             padding: 30px;
             background: #fff;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
         }
         #lead-capture h2 {
-            font-size: 2em;
+            font-size: 2.2em;
             margin-bottom: 20px;
             text-align: center;
             color: #ff6f61;
@@ -61,28 +62,37 @@
         }
         form input {
             width: 100%;
-            padding: 12px;
+            padding: 14px;
             margin-bottom: 20px;
             border: 1px solid #ddd;
             border-radius: 4px;
+            transition: border-color 0.3s;
+        }
+        form input:focus {
+            border-color: #ff6f61;
+            outline: none;
         }
         form button {
             width: 100%;
             background: #ff6f61;
             color: #fff;
             border: none;
-            padding: 15px;
-            font-size: 1em;
+            padding: 18px;
+            font-size: 1.1em;
             border-radius: 4px;
             cursor: pointer;
-            transition: background 0.3s;
+            transition: background 0.3s, transform 0.2s;
         }
         form button:hover {
             background: #d84315;
+            transform: translateY(-3px);
+        }
+        form button:active {
+            transform: translateY(1px);
         }
         .hero-image {
-            background: url('https://source.unsplash.com/1600x900/?luxury-car') no-repeat center center/cover;
-            height: 400px;
+            background: url('https://source.unsplash.com/1600x900/?luxury-car,vehicle') no-repeat center center/cover;
+            height: 500px;
             position: relative;
         }
         .hero-text {
@@ -92,15 +102,49 @@
             transform: translate(-50%, -50%);
             color: #fff;
             text-align: center;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
         }
         .hero-text h1 {
-            font-size: 3em;
+            font-size: 3.5em;
             margin-bottom: 0.5em;
             font-weight: 700;
         }
         .hero-text p {
-            font-size: 1.3em;
+            font-size: 1.5em;
             font-weight: 300;
+        }
+        .hero-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            background: #ff6f61;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 1.1em;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .hero-button:hover {
+            background: #d84315;
+            transform: translateY(-3px);
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: #333;
+            color: #fff;
+            font-size: 0.9em;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2em;
+            }
+            .hero-text h1 {
+                font-size: 2.5em;
+            }
+            .hero-text p {
+                font-size: 1.2em;
+            }
         }
     </style>
 </head>
@@ -113,6 +157,7 @@
         <div class="hero-text">
             <h1>Find the Best Deals on Your Next Ride</h1>
             <p>Your dream car is just a click away</p>
+            <a href="#lead-capture" class="hero-button">Get Started Now</a>
         </div>
     </div>
     <main>
@@ -137,7 +182,7 @@
         </section>
     </main>
     <footer>
-        <p style="text-align: center; padding: 20px 0; background: #333; color: #fff;">&copy; 2024 Snap Autowheels. All rights reserved.</p>
+        <p>&copy; 2024 Snap Autowheels. All rights reserved.</p>
     </footer>
 </body>
 </html>
