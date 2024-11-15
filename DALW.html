@@ -3,36 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Get exclusive auto deals with Snap Autowheels. Find the best offers and let us connect you to the car of your dreams.">
-    <title>Snap Autowheels - Lead Generation</title>
+    <meta name="description" content="Get exclusive auto deals with Snap Autowheels. Let us connect you to the car of your dreams at the best price.">
+    <title>Snap Autowheels - Drive Your Dream Today</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(90deg, #ff6f61, #d84315);
+            color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.8em;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.2em;
+            font-weight: 300;
+        }
+        main {
+            padding: 40px 20px;
+        }
+        #lead-capture {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        #lead-capture h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #ff6f61;
+        }
+        #lead-capture p {
+            font-size: 1em;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #666;
+        }
+        form label {
+            display: block;
+            font-weight: 500;
+            margin: 10px 0 5px;
+        }
+        form input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        form button {
+            width: 100%;
+            background: #ff6f61;
+            color: #fff;
+            border: none;
+            padding: 15px;
+            font-size: 1em;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        form button:hover {
+            background: #d84315;
+        }
+        .hero-image {
+            background: url('https://source.unsplash.com/1600x900/?luxury-car') no-repeat center center/cover;
+            height: 400px;
+            position: relative;
+        }
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            text-align: center;
+        }
+        .hero-text h1 {
+            font-size: 3em;
+            margin-bottom: 0.5em;
+            font-weight: 700;
+        }
+        .hero-text p {
+            font-size: 1.3em;
+            font-weight: 300;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to Snap Autowheels</h1>
-        <p>Your trusted source for exclusive car deals and offers.</p>
+        <h1>Snap Autowheels - Drive Your Dream</h1>
+        <p>Get exclusive auto deals today. Let us help you find the car of your dreams with unmatched offers.</p>
     </header>
+    <div class="hero-image">
+        <div class="hero-text">
+            <h1>Find the Best Deals on Your Next Ride</h1>
+            <p>Your dream car is just a click away</p>
+        </div>
+    </div>
     <main>
         <section id="lead-capture">
             <h2>Get Your Free Quote Today!</h2>
             <p>Complete the form below and one of our experts will get in touch with you shortly.</p>
             <form id="lead-form" action="submit_lead.php" method="POST">
-                <label for="name">Name:</label>
+                <label for="name">Full Name:</label>
                 <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
+
+                <label for="email">Email Address:</label>
                 <input type="email" id="email" name="email" required>
-                
+
                 <label for="phone">Phone Number:</label>
                 <input type="tel" id="phone" name="phone" required>
-                
+
+                <label for="make">Preferred Make:</label>
+                <input type="text" id="make" name="make">
+
                 <button type="submit">Get a Quote</button>
             </form>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Snap Autowheels. All rights reserved.</p>
+        <p style="text-align: center; padding: 20px 0; background: #333; color: #fff;">&copy; 2024 Snap Autowheels. All rights reserved.</p>
     </footer>
-    <script src="scripts.js"></script>
 </body>
 </html>
